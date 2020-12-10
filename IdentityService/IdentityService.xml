@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdentityService</name>
+    </assembly>
+    <members>
+        <member name="M:IdentityService.Controllers.JWTController.Post(IdentityService.Models.UserInfo)">
+            <summary>
+            Authenticate the user with his login credentials (username and password)
+            The Call will return a JWT token. This token will be used to access the rest of API calls
+            </summary>
+        </member>
+    </members>
+</doc>

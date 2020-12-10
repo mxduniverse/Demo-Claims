@@ -1,0 +1,88 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center mb-3">
+    <h4 class="card-title mb-3">Edit a claim</h4>
+
+  </div>
+  <div class="card-body">
+    <div *ngIf="currentClaim" class="edit-form">
+
+      <form>
+        <div class="form-group">
+          <label for="title">Date</label>
+          <input type="date"
+                 class="form-control"
+                 id="title"
+                 required
+                 [value]="currentClaim.date | date:'yyyy-MM-dd'"
+                 name="date" />
+        </div>
+        <div class="form-group">
+          <label for="title">DamagedItem</label>
+          <input type="text"
+                 class="form-control"
+                 id="damagedItem"
+                 required
+                 [(ngModel)]="currentClaim.damagedItem"
+                 name="DamagedItem" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Incidence</label>
+          <input class="form-control"
+                 id="Incidence"
+                 required
+                 [(ngModel)]="currentClaim.incidence"
+                 name="Incidence" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control"
+                 id="description"
+                 required
+                 [(ngModel)]="currentClaim.description"
+                 name="description" />
+        </div>
+
+
+        <div class="form-group">
+          <label for="description">Address</label>
+          <input class="form-control"
+                 id="address"
+                 required
+                 [(ngModel)]="currentClaim.address"
+                 name="address" />
+        </div>
+
+
+
+        <div class="form-group">
+          <label><strong>Status:</strong></label>
+          {{ currentClaim.status}}
+        </div>
+      </form>
+
+      <button type="submit" class="btn btn-success  mr-3" (click)="updateClaim()">
+        Update
+      </button>
+
+      <button class="btn btn-danger  mr-3" (click)="deleteClaim()">
+        Delete
+      </button>
+
+
+      <a class="btn btn-primary " href="/claims">Go back to your claims</a>
+
+      <div *ngIf="message" class="alert alert-success" role="alert">
+        <p>{{ message }}</p>
+      </div>
+
+     
+
+      <div *ngIf="!currentClaim">
+        <br />
+        <p>Cannot access this Claim...</p>
+      </div>
+    </div>
+</div>
+  </div>

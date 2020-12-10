@@ -1,0 +1,74 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center mb-3">
+    <h4 class="card-title mb-3">Submit a new claim</h4>
+
+  </div>
+
+  <div class="card-body">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+
+        <div class="form-group">
+          <label for="title">Date</label>
+          <input type="date"
+                 class="form-control"
+                 id="title"
+                 required
+                 [(ngModel)]="claim.Date"
+                 name="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="staticUserIdsSecondWay">Damaged Item</label>
+
+          <input type="text"
+                 class="form-control"
+                 id="damagedItem"
+                 required
+                 [(ngModel)]="claim.DamagedItem"
+                 name="DamagedItem" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Incidence</label>
+          <input class="form-control"
+                 id="Incidence"
+                 required
+                 [(ngModel)]="claim.Incidence"
+                 name="Incidence" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control"
+                 id="description"
+                 required
+                 [(ngModel)]="claim.Description"
+                 name="description" />
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="description">Address</label>
+          <input class="form-control"
+                 id="description"
+                 required
+                 [(ngModel)]="claim.Address"
+                 name="address" />
+        </div>
+
+
+
+        <button (click)="saveClaim()" class="btn btn-success">Submit</button>
+
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>You submitted your claim successfully!</h4>
+        <button class="btn btn-success" (click)="newClaim()">Submit new claim</button>
+        <a class="btn btn-primary  float-right" href="/claims">Go back to your claims</a>
+      </div>
+    </div>
+  </div>
+</div>

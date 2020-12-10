@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClaimService</name>
+    </assembly>
+    <members>
+        <member name="M:ClaimService.Controllers.ClaimsController.GetClaims(System.Nullable{System.Int32},System.String)">
+             <summary>
+             Get All the Claims
+             </summary>
+             <remarks>
+             To return a claims specific to a user, you can filter by userid or 
+             add search for a claim
+            
+             </remarks>
+             <param name="userid">Optional. Use to filter claims by user</param>
+             <param name="description">Optional. Use to search claims based on the description</param>
+             <returns>A newly created Claim</returns>
+        </member>
+    </members>
+</doc>
