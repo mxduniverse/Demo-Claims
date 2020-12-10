@@ -34,7 +34,7 @@ namespace BackendServices.Test
         //    await AuthenticateAsync();
             var createdClaim = await CreateClaimAsync(new Claims
             {
-                DamagedItem ="DamangeItem",
+                DamagedItem = "DamagedItem",
                 Address = "Test",
                 Incidence = "Incidence Test",
                 Date = DateTime.Now,
